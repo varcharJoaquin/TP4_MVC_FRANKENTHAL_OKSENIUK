@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "SelectPaquete";
+}
+
+<section>
+    <nav class="navbar">
+        <ul>
+            <li><a href='@Url.Action("Index", "Home")'>Home</a></li>
+            <li><a href='@Url.Action("SelectPaquete", "Home")'>Seleccione paquete</a></li>
+        </ul>
+    </nav>
+    <h2>@ViewBag.Mensaje</h2>
+    <form method="post" action='@Url.Action("GuardarPaquete")' class="formulario">
+        <h3>Seleccionar el número del destino</h3>
+        @for (int i = 0; i < ViewBag.ListaDestinos.Count; i++) {
+            <p> @(i + 1) - @ViewBag.ListaDestinos[i] </p>
+        }
+        <input type="number" name="Destino" required max="10" min="1"/>
+        
+        <h3>Seleccionar el hotel</h3>
+        @for (int i = 0; i < ViewBag.ListaHoteles.Count; i++) {
+            <p> @(i + 1) - @ViewBag.ListaHoteles[i] </p>
+        }
+        <input type="number" name="Hotel" required max="5" min="1"/>
+        
+        <h3>Seleccionar el aereo</h3>
+        <div class="aereo-list">
+            @for (int i = 0; i < ViewBag.ListaAereos.Count; i++) {
+                <div>
+                    <p>@(i + 1)</p>
+                    <img src="~/images_Aereos/@ViewBag.ListaAereos[i]" alt="Aereo"/>
+                </div>
+            }
+        </div>
+        <input type="number" name="Aereo" required max="5" min="1"/>
+        
+        <h3>Seleccionar la excursion</h3>
+        <div class="excursion-lista">
+            @for (int i = 0; i < ViewBag.ListaExcursiones.Count; i++) {
+                <div>
+                    <p>@(i + 1)</p>
+                    <img src="~/images_Excursiones/@ViewBag.ListaExcursiones[i]" alt="Excursion"/>
+                </div>
+            }
+        </div>
+        <input type="number" name="Excursion" required max="10" min="1"/>
+        
+        <input type="submit" value="Enviar paquete"/>
+    </form>

@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <nav class="navbar">
+      <ul>
+        <li><a href = '@Url.Action("Index", "Home")'> Home </a></li>
+        <li><a href = '@Url.Action("SelectPaquete", "Home")'> Seleccione Paquete </a></li>
+      </ul>
+    </nav>
+  <h1 class="bienvenida"> Bienvenide a ORTWorld </h1>
+  <h2 class="viaja"> Viaja que viaja. Vamonós! </h2>
+  <h2 class="bomba  ">¡Nuestros destinos son la bomba!</h2>
+    
+    @if (ViewBag.Paquetes != null && ((IDictionary<string, Paquete>)ViewBag.Paquetes).Count > 0)
+    {
+      <h2 class = "paquetesCreados"> Paquetes creados: </h2>
+          @foreach (KeyValuePair<string, Paquete> x in (IDictionary<string, Paquete>)ViewBag.Paquetes) {
+              string destino = x.Key;
+              Paquete paqueteCreado = x.Value;
+                <ul class="listadestinos">
+                    <li> destino: @destino</li>
+                    <li> aereo: <img src = "~/images_Aereos/@paqueteCreado.Aereo"> </li>
+                    <li> hotel: @paqueteCreado.Hotel </li>
+                    <li> excursiones: <img src = "~/images_Excursiones/@paqueteCreado.Excursion"> </li>
+                </ul>
+          }
+    }
+   else
+   {
+    <h2 class = "paquetesCreados"> No hay paquetes creados aún</h2>
+   }
+</div>

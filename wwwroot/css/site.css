@@ -1,0 +1,138 @@
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.navbar {
+  background-color: #008cba;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: rgb(238, 236, 236);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.navbar ul li a:hover {
+  background-color: #005f73;
+}
+
+h1.bienvenida {
+  text-align: center;
+  color: #005f73;
+  margin-top: 20px;
+  font-size: 2.5em;
+}
+
+h2.viaja, h2.bomba, h2.paquetesCreados {
+  text-align: center;
+  color: #007b8a;
+  margin-top: 10px;
+}
+
+h2.paquetesCreados {
+  margin-top: 30px;
+}
+
+.listadestinos {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listadestinos li {
+  background-color: #e0f7fa;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listadestinos li img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+section {
+  background-color: #f0f8ff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h3 {
+  color: #007b8a;
+}
+
+.formulario p {
+  margin: 10px 0;
+  color: #005f73;
+  display: flex;
+  align-items: center;
+}
+
+.formulario img {
+  max-width: 150px;
+  margin-right: 10px;
+}
+
+.formulario input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #007b8a;
+  border-radius: 3px;
+}
+
+.formulario input[type="submit"] {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+  background-color: #005f73;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
